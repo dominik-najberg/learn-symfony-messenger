@@ -18,6 +18,10 @@ http://localhost:15672/
 Login: rabbitmq
 Password: rabbitmq
 
+## Step 1 (No Handler exception)
+
+* SendMessage created
+* Simple controller so you can open http://127.0.0.1:8000 to test the changes
 
 ## Useful links
 * [Symfony Messenger](https://symfony.com/doc/current/components/messenger.html)
