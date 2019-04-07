@@ -3,10 +3,11 @@ framework:
         transports:
             # Uncomment the following line to enable a transport named "amqp"
             amqp: '%env(MESSENGER_TRANSPORT_DSN)%'
+            my_trans: '%env(WEBHOOK_TRANSPORT_DSN)%'
 
         routing:
             # Route your messages to the transports
-            'App\Message\SendNotification': amqp
+            'App\Message\SendNotification': my_trans
 
         buses:
             messenger.bus.commands:
