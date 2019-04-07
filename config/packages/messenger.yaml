@@ -7,3 +7,7 @@ framework:
         routing:
             # Route your messages to the transports
             # 'App\Message\YourMessage': amqp
+
+        buses:
+            messenger.bus.commands: ~
+            messenger.bus.events: ~

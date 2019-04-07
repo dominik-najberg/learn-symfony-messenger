@@ -27,6 +27,12 @@ Password: rabbitmq
 
 * Added a handler for the SendMessage object
 
+## Step 3 (Multiple Buses)
+
+* Two buses available now
+* SendNotificationHandler implements MessageSubscriberInterface
+* Autowiring configured
+
 ## Useful links
 * [Symfony Messenger](https://symfony.com/doc/current/components/messenger.html)
 * [Dominik Najberg - contact to this presentation's author](https://www.linkedin.com/in/dominik-najberg/)
