@@ -23,6 +23,10 @@ Password: rabbitmq
 * SendMessage created
 * Simple controller so you can open http://127.0.0.1:8000 to test the changes
 
+## Step 2 (Handler added)
+
+* Added a handler for the SendMessage object
+
 ## Useful links
 * [Symfony Messenger](https://symfony.com/doc/current/components/messenger.html)
 * [Dominik Najberg - contact to this presentation's author](https://www.linkedin.com/in/dominik-najberg/)
