@@ -37,6 +37,11 @@ Password: rabbitmq
 
 * Added the AuditMiddleware
 
+## Step 5 (Custom Stamp)
+
+* Added the AuditStamp custom stamp
+* Correlation ID
+
 ## Useful links
 * [Symfony Messenger](https://symfony.com/doc/current/components/messenger.html)
 * [Dominik Najberg - contact to this presentation's author](https://www.linkedin.com/in/dominik-najberg/)

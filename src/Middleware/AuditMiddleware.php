@@ -4,6 +4,7 @@
 namespace App\Middleware;
 
 
+use App\Stamp\AuditStamp;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Middleware\MiddlewareInterface;
 use Symfony\Component\Messenger\Middleware\StackInterface;
@@ -14,12 +15,16 @@ class AuditMiddleware implements MiddlewareInterface
     {
         $message = $envelope->getMessage();
 
+        if (null == $auditStamp = $envelope->last(AuditStamp::class)) {
+            $envelope = $envelope->with( $auditStamp = new AuditStamp(uniqid()) );
+        }
+
         try {
-            echo sprintf('Started with the message "%s"'. "\n", get_class($message));
+            echo sprintf('[%s] Started with the message "%s"'."\n", $auditStamp->getUuid(), get_class($message));
 
             return $stack->next()->handle($envelope, $stack);
         } finally {
-            echo sprintf('Finished with the message "%s"'. "\n", get_class($message));
+            echo sprintf('[%s] Finished with the message "%s"'."\n", $auditStamp->getUuid(), get_class($message));
         }
     }
 }
