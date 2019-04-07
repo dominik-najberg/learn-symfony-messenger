@@ -33,6 +33,10 @@ Password: rabbitmq
 * SendNotificationHandler implements MessageSubscriberInterface
 * Autowiring configured
 
+## Step 4 (Custom Middleware)
+
+* Added the AuditMiddleware
+
 ## Useful links
 * [Symfony Messenger](https://symfony.com/doc/current/components/messenger.html)
 * [Dominik Najberg - contact to this presentation's author](https://www.linkedin.com/in/dominik-najberg/)

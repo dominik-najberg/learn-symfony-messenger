@@ -9,5 +9,7 @@ framework:
             # 'App\Message\YourMessage': amqp
 
         buses:
-            messenger.bus.commands: ~
+            messenger.bus.commands:
+                middleware:
+                    - 'App\Middleware\AuditMiddleware'
             messenger.bus.events: ~
