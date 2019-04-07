@@ -42,6 +42,16 @@ Password: rabbitmq
 * Added the AuditStamp custom stamp
 * Correlation ID
 
+## Step 6 (Transport)
+
+* RabbitMQ
+
+Remember to run your RabbitMQ docker image. Also, run the Worker:
+
+```
+bin/console messenger:consume-messages amqp -b messenger.bus.commands
+```
+
 ## Useful links
 * [Symfony Messenger](https://symfony.com/doc/current/components/messenger.html)
 * [Dominik Najberg - contact to this presentation's author](https://www.linkedin.com/in/dominik-najberg/)
